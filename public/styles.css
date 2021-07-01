@@ -1,0 +1,29 @@
+html {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+body {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  background-color: #aaaaaa;
+}
+
+.main-div {
+  padding-left: 20px;
+}
+
+.button-div {
+  margin-top: 20px;
+}
+.link-div {
+  margin-top: 20px;
+}
+
+.example-div {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 8px;
+  margin-right: 20px;
+  margin-top: 20px;
+  padding: 10px;
+}

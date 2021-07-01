@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./modules/my-module.js" defer></script>
+    <script src="./main.js" defer></script>
+
+    <title>Standard Script</title>
+  </head>
+  <body>
+    <div class="main-div">
+      <h1>Standard Script Version</h1>
+      <div class='link-div'>
+        Switch to <a href="/index2.html">Import Module Version</a>
+      </div>
+      <div class="button-div">
+        <button id="executeButton">Execute</button>
+      </div>
+      <p>
+        Declared text returned from standard script function.
+      </p>
+      <div class="example-div">
+        <div id='contentDiv'>
+          <!-- content will be inserted dynamically -->
+        </div>
+      </div>
+      <p>
+        Content returned by fetch request in standard script function
+      </p>
+      <div class="example-div">
+        <pre id="fetchDiv">
+          <!-- content will be inserted dynamically -->
+        </pre>
+      </div>
+    </div>
+  </body>
+</html>
