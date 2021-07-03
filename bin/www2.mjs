@@ -5,18 +5,18 @@ console.log('Loading bin/www2.mjs');
 import app from '../server/app2.mjs';
 import http from 'http';
 
-var server = http.createServer(app);
+const server = http.createServer(app);
 
-var port = 5000;
+const port = 5000;
 server.listen(port);
 
-server.on('listening', function() {
-  var address = server.address();
+server.on('listening', function () {
+  const address = server.address();
   console.log('listening: ' + address.address + ':' + address.port +
     ' ' + address.family);
 });
 
-server.on('error', function(error) {
+server.on('error', function (error) {
   if (error.syscall !== 'listen') {
     throw error;
   }
