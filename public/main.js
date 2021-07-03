@@ -2,7 +2,10 @@
 // This is a standard script loaded my index.html
 // ---------------------------------------------------
 'use strict';
-console.log('Loading main.js');
+
+// blank lines to sync line numbers
+//
+//
 
 if (typeof myModule !== 'object') {
   console.log('myModule not loaded');
@@ -21,5 +24,3 @@ if (typeof myModule !== 'object') {
     myModule.fetchJson(fetchDivElement);
   });
 }
-
-console.log('Done loading main.js');

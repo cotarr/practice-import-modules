@@ -1,4 +1,3 @@
-console.log('Loading api-routes2.mjs');
 
 import express from 'express';
 const router = express.Router();
@@ -14,5 +13,3 @@ router.get('/myroute', function (req, res, next) {
 });
 
 export default router;
-
-console.log('Done loading api-routes2.mjs');

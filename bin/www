@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 
-console.log('Loading bin/www');
-
 const app = require('../server/app');
 const http = require('http');
 
@@ -30,5 +28,3 @@ server.on('error', function (error) {
   }
   throw error;
 });
-
-console.log('Done loading bin/www');

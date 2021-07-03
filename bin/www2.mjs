@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 
-console.log('Loading bin/www2.mjs');
-
 import app from '../server/app2.mjs';
 import http from 'http';
 
@@ -30,5 +28,3 @@ server.on('error', function (error) {
   }
   throw error;
 });
-
-console.log('Done loading bin/www2.mjs');

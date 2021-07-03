@@ -1,5 +1,4 @@
 'use strict';
-console.log('Loading app.js');
 
 // native node packages
 const path = require('path');
@@ -10,11 +9,17 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const logger = require('morgan');
 const helmet = require('helmet');
-const app = express();
 
+// route modules
 const dataRoutes = require('./routes/api-routes');
 
 // blank lines to sync line numbers with sister file
+//
+//
+//
+
+// express app
+const app = express();
 
 app.use(bodyParser.json());
 
@@ -28,7 +33,7 @@ app.use(logger(':date[iso] :remote-addr :status :method :http-version :req[host]
 // Headers and Content Security Policy
 //
 app.use(helmet());
-/* eslint-disable quotes */
+
 app.use(helmet.contentSecurityPolicy({
   directives:
     {
@@ -40,7 +45,6 @@ app.use(helmet.contentSecurityPolicy({
       imgSrc: ["'self'"]
     }
 }));
-/* eslint-enable quotes */
 
 //
 // /status, Is the server alive?
@@ -70,5 +74,3 @@ console.log('Serve public: ' + publicDir);
 // ----------------------------------
 
 module.exports = app;
-
-console.log('Done loading app.js');

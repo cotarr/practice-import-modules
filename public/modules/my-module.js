@@ -1,5 +1,4 @@
 'use strict';
-console.log('Loading my-module.js');
 
 const myModule = {};
 
@@ -36,4 +35,3 @@ myModule.fetchJson = function (el) {
       console.log(error);
     });
 };
-console.log('Done loading my-module.js');

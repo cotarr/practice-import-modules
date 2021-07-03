@@ -1,5 +1,3 @@
-console.log('Loading test-module.mjs');
-
 // Load an old style module with object containing multiple functions
 import legacy from './legacy-module.js';
 
@@ -17,5 +15,3 @@ const dummy = function () {
 };
 
 export default dummy;
-
-console.log('Done loading test-module.mjs');

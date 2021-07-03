@@ -3,7 +3,6 @@
 // -------------------------------------------------------------------
 (function () {
   'use strict';
-  console.log('Loading legacy-module.js');
 
   const logLegacy = function () {
     console.log('File: legacy-module.js. This is a legacy function with module.exports');
@@ -16,5 +15,4 @@
     logLegacy: logLegacy,
     logLegacy2: logLegacy2
   };
-  console.log('Done loading legacy-module.js');
 })();

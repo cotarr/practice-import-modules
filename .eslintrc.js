@@ -12,7 +12,6 @@ module.exports = {
     sourceType: 'module'
   },
   rules: {
-    'import/first': 'off',
     'no-undef': 'off',
     semi: ['error', 'always']
   }

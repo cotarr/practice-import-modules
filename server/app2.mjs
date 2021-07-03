@@ -1,5 +1,4 @@
 'use strict';
-console.log('loading app2.mjs');
 
 // native node packages
 import path from 'path';
@@ -10,13 +9,17 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import logger from 'morgan';
 import helmet from 'helmet';
-const app = express();
 
+// route modules
 import dataRoutes from './routes/api-routes2.mjs';
 
 // The test module is used to experiment (independant of ExpressJs)
 import testModule from './modules/test-module.mjs';
+// call test module dummy function
 testModule();
+
+// express app
+const app = express();
 
 app.use(bodyParser.json());
 
@@ -30,7 +33,7 @@ app.use(logger(':date[iso] :remote-addr :status :method :http-version :req[host]
 // Headers and Content Security Policy
 //
 app.use(helmet());
-/* eslint-disable quotes */
+
 app.use(helmet.contentSecurityPolicy({
   directives:
     {
@@ -42,7 +45,6 @@ app.use(helmet.contentSecurityPolicy({
       imgSrc: ["'self'"]
     }
 }));
-/* eslint-enable quotes */
 
 //
 // /status, Is the server alive?
@@ -72,5 +74,3 @@ console.log('Serve public: ' + publicDir);
 // ----------------------------------
 
 export default app;
-
-console.log('Done loading app2.mjs');

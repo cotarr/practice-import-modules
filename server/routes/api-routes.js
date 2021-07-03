@@ -1,4 +1,3 @@
-console.log('Loading api-routes.js');
 (function () {
   const express = require('express');
   const router = express.Router();
@@ -15,4 +14,3 @@ console.log('Loading api-routes.js');
 
   module.exports = router;
 }());
-console.log('Done loading api-routes.js');
