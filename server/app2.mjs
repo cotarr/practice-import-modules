@@ -16,6 +16,7 @@ import dataRoutes from './routes/api-routes2.mjs';
 
 // The test module is used to experiment (independant of ExpressJs)
 import testModule from './modules/test-module.mjs';
+testModule();
 
 app.use(bodyParser.json());
 
@@ -46,7 +47,7 @@ app.use(helmet.contentSecurityPolicy({
 //
 // /status, Is the server alive?
 //
-app.get('/status', (req, res) => res.json({status: 'ok'}));
+app.get('/status', (req, res) => res.json({ status: 'ok' }));
 
 // ----------------------------------
 // This is a dummy api route handler
@@ -61,7 +62,7 @@ const __filename = url.fileURLToPath(import.meta.url);
 // remove file leaving directory, this ends in "/server/"
 const __dirname = path.dirname(__filename);
 // backup (remove) the /server/ at the end of the tree and merge
-let publicDir = path.join(__dirname, '../public');
+const publicDir = path.join(__dirname, '../public');
 
 app.use(express.static(publicDir));
 console.log('Serve public: ' + publicDir);

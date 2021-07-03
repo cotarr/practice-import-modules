@@ -6,21 +6,21 @@ const myModule = {};
 //
 // Generate content
 //
-myModule.generateString = function() {
-  let content = 'This is some text content generated from a module function';
+myModule.generateString = function () {
+  const content = 'This is some text content generated from a module function';
   return content;
 };
 
-myModule.fetchJson = function(el) {
-  let fetchURL = '/api/myroute';
-  let fetchOptions = {
+myModule.fetchJson = function (el) {
+  const fetchURL = '/api/myroute';
+  const fetchOptions = {
     method: 'get',
     headers: {
-      'Accept': 'application/json'
+      Accept: 'application/json'
     }
   };
   fetch(fetchURL, fetchOptions)
-    .then( (response) => {
+    .then((response) => {
       // console.log(response.status);
       if (response.ok) {
         return response.json();
@@ -28,16 +28,15 @@ myModule.fetchJson = function(el) {
         throw new Error('Fetch status ' + response.status + ' ' + response.statusText);
       }
     })
-    .then( (responseJson) => {
+    .then((responseJson) => {
       console.log(JSON.stringify(responseJson));
       el.textContent = JSON.stringify(responseJson, null, 2);
     })
-    .catch( (error) => {
-      showError('Terminate: Unable to connect');
+    .catch((error) => {
       console.log(error);
     });
 };
 
-export {myModule};
+export { myModule };
 
 console.log('Done loading my-module2.mjs');

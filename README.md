@@ -63,11 +63,3 @@ node bin/www2.mjs
 ```url
 http://localhost:5000
 ```
-
-- Added to eslint to clear import / export errors
-
-```
-"parserOptions": {
-    "sourceType": "module"
-}
-```

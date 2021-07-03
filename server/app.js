@@ -3,7 +3,7 @@ console.log('Loading app.js');
 
 // native node packages
 const path = require('path');
-const url = require('url');
+// const url = require('url');
 
 // express packages
 const express = require('express');
@@ -15,7 +15,6 @@ const app = express();
 const dataRoutes = require('./routes/api-routes');
 
 // blank lines to sync line numbers with sister file
-
 
 app.use(bodyParser.json());
 
@@ -46,7 +45,7 @@ app.use(helmet.contentSecurityPolicy({
 //
 // /status, Is the server alive?
 //
-app.get('/status', (req, res) => res.json({status: 'ok'}));
+app.get('/status', (req, res) => res.json({ status: 'ok' }));
 
 // ----------------------------------
 // This is a dummy api route handler
@@ -56,12 +55,12 @@ app.use('/api/', dataRoutes);
 // -------------------
 // Load main page
 // -------------------
-let publicDir = path.join(__dirname, '../public');
+const publicDir = path.join(__dirname, '../public');
 
-
+//
 // blank lines to sync line numbers with sister file
-
-
+//
+//
 
 app.use(express.static(publicDir));
 console.log('Serve public: ' + publicDir);
