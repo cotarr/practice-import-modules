@@ -2,17 +2,17 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    node: true
+    node: true,
   },
   extends: [
-    'standard'
+    'standard',
   ],
   parserOptions: {
     ecmaVersion: 12,
-    sourceType: 'module'
+    sourceType: 'module',
   },
   rules: {
-    'no-undef': 'off',
-    semi: ['error', 'always']
-  }
+    'comma-dangle': 'off',
+    'semi': 'error', 'always'
+  },
 };
