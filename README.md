@@ -69,15 +69,12 @@ http://localhost:5000
 eslint is loaded locally to experiment with style rules related to modules (see file .eslintrc)
 
 ```
-# node
 npx eslint bin/www
 npx eslint bin/www2.mjs
 
-# express
 npx eslint server/*/*.js server/*.js
 npx eslint server/*/*.mjs server/*.mjs
 
-# browser
 npx eslint public/*/*.js public/*.js
 npx eslint public/*/*.mjs public/*.mjs
 
