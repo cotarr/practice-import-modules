@@ -6,8 +6,10 @@ const path = require('path');
 
 // express packages
 const express = require('express');
-const bodyParser = require('body-parser');
+
+// morgan@1.10.0 appears to be a CommonJS package
 const logger = require('morgan');
+// helmet@7.0.0 appears to be a ES Package
 const helmet = require('helmet');
 
 // route modules
@@ -21,16 +23,17 @@ const dataRoutes = require('./routes/api-routes');
 // express app
 const app = express();
 
-app.use(bodyParser.json());
+// body parser
+app.use(express.json());
 
 //
-// HTTP access log
+// HTTP access log (Example CommonJs Module)
 //
 app.use(logger(':date[iso] :remote-addr :status :method :http-version :req[host]:url', {
 }));
 
 //
-// Headers and Content Security Policy
+// Security Headers (Example ES Module)
 //
 app.use(helmet());
 

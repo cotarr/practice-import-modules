@@ -1,8 +1,9 @@
 // Load a require/exports module with object containing multiple functions
-import legacy from './legacy-module.js';
+import legacy from './legacy-module.cjs';
 
 // Load a require/exports module containing single function
-import logFunc from './legacy-function.js';
+import logFunc from './legacy-function.cjs';
+// const logFunc = require('./legacy-function.js').logFunc;
 
 // Execute the imported functions
 legacy.logLegacy();

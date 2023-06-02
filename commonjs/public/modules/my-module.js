@@ -2,6 +2,8 @@
 
 const myModule = {};
 
+myModule.info = "This is in scope of the module";
+
 //
 // Generate content
 //

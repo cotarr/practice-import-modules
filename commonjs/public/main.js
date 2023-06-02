@@ -1,9 +1,9 @@
 // ---------------------------------------------------
-// This is a standard script loaded my index.html
+// This is a native javascript file loaded by index.html
 // ---------------------------------------------------
 'use strict';
 
-// blank lines to sync line numbers
+// blank lines to sync line numbers with ES version
 //
 //
 
@@ -24,3 +24,5 @@ if (typeof myModule !== 'object') {
     myModule.fetchJson(fetchDivElement);
   });
 }
+
+console.log('Done loading main.js');

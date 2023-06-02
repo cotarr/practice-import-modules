@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import app from '../server/app2.mjs';
+import app from '../server/app.mjs';
 import http from 'http';
 
 const server = http.createServer(app);

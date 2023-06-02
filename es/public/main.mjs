@@ -1,11 +1,11 @@
 // ---------------------------------------------------
-// This is a an import module load from index2.html
+// This is a an ES module loaded from index.html
 // ---------------------------------------------------
 'use strict';
 
-import { myModule } from './modules/my-module2.mjs';
+import { myModule } from './modules/my-module.mjs';
 
-console.log('Loading main2.mjs');
+console.log('Loading main.mjs');
 
 if (typeof myModule !== 'object') {
   console.log('myModule not loaded');
@@ -25,4 +25,4 @@ if (typeof myModule !== 'object') {
   });
 }
 
-console.log('Done loading main2.mjs');
+console.log('Done loading main.mjs');

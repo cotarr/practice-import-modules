@@ -6,14 +6,17 @@ import url from 'url';
 
 // express packages
 import express from 'express';
-import bodyParser from 'body-parser';
+
+// morgan@1.10.0 appears to be a CommonJS package
 import logger from 'morgan';
+
+// helmet@7.0.0 appears to be a ES Package
 import helmet from 'helmet';
 
 // route modules
-import dataRoutes from './routes/api-routes2.mjs';
+import dataRoutes from './routes/api-routes.mjs';
 
-// The test module is used to experiment (independant of ExpressJs)
+// The test module is used to experiment (Independent of ExpressJs)
 import testModule from './modules/test-module.mjs';
 // call test module dummy function
 testModule();
@@ -21,7 +24,8 @@ testModule();
 // express app
 const app = express();
 
-app.use(bodyParser.json());
+// body parser
+app.use(express.json());
 
 //
 // HTTP access log

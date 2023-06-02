@@ -4,22 +4,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
-    <script src="./modules/my-module.js" defer></script>
-    <script src="./main.js" defer></script>
 
-    <title>Standard Script</title>
+    <!-- The defer attribute is not required for modules -->
+    <!-- All other modules loaded from main.js -->
+    <script type="module" src="./main.mjs"></script>
+
+    <title>ES Modules Version</title>
   </head>
   <body>
     <div class="main-div">
-      <h1>Standard Script Version</h1>
-      <div class='link-div'>
-        Switch to <a href="/index2.html">Import Module Version</a>
-      </div>
+      <h1>ES Modules Version</h1>
       <div class="button-div">
         <button id="executeButton">Execute</button>
       </div>
       <p>
-        Declared text returned from standard script function.
+        Declared text returned from ES modulen.
       </p>
       <div class="example-div">
         <div id='contentDiv'>
@@ -27,7 +26,7 @@
         </div>
       </div>
       <p>
-        Content returned by fetch request in standard script function
+        Content returned by fetch request in ES module
       </p>
       <div class="example-div">
         <pre id="fetchDiv">

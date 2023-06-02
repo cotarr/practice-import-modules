@@ -1,0 +1,29 @@
+{
+  "name": "practice-import-modules",
+  "version": "0.0.1",
+  "description": "Compare code with JavaScript require modules with import modules.",
+  "main": "bin/www.mjs",
+  "type": "module",
+  "engines": {
+		"node": ">=16.0.0"
+	},
+  "scripts": {
+    "start": "node ./bin/www.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cotarr/practice-import-modules.git"
+  },
+  "author": "Dave Bolenbaugh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cotarr/practice-import-modules/issues"
+  },
+  "homepage": "https://github.com/cotarr/practice-import-modules#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "helmet": "^7.0.0",
+    "morgan": "^1.10.0"
+  }
+}
